@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Text?>
+<VBox spacing="20" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewcontroller.MandelbrotC">
+    <BorderPane>
+        <left>
+            <Button fx:id="btStart" onAction="#btStartOnAction" text="Start" />
+        </left>
+        <center>
+            <ProgressBar fx:id="pbBuild" />
+        </center>
+        <right>
+            <Label fx:id="lbTime" />
+        </right>
+    </BorderPane>
+    <Canvas fx:id="cvMandelbrot" width="1000" height="560" />
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
